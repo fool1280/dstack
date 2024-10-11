@@ -3,5 +3,5 @@ ARG VERSION
 
 FROM dstackai/base:py$PYTHON-$VERSION-cuda-12.1
 
-RUN /opt/conda/condabin/conda install --name workflow cuda -y && \
+RUN /opt/conda/condabin/conda install --name base cuda -y && \
     /opt/conda/condabin/conda clean --all

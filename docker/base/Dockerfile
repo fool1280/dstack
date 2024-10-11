@@ -23,8 +23,8 @@ RUN wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/lat
     chmod +x /opt/conda/etc/profile.d/conda.sh && \
     echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
     /opt/conda/condabin/conda update conda --all -y && \
-    /opt/conda/condabin/conda create --name workflow python=${PYTHON} -y && \
+    /opt/conda/condabin/conda create --name base python=${PYTHON} -y && \
     /opt/conda/condabin/conda config --prepend channels "nvidia/label/cuda-12.1.0" && \
     /opt/conda/condabin/conda config --set always_yes true && \
     /opt/conda/condabin/conda clean --all && \
-    echo "conda activate workflow" >> ~/.bashrc
+    echo "conda activate base" >> ~/.bashrc
